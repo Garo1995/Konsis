@@ -935,6 +935,7 @@ p{
 }
 .course-href{
     background: rgba(233, 234, 227, 1);
+    min-width: 44px;
     width: 44px;
     height: 44px;
     padding: 10px;
