@@ -1,0 +1,232 @@
+header{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1111;
+    width: 100%;
+}
+.header-main{
+    position: relative;
+}
+.header-flex{
+    gap: 24px;
+}
+.logo{
+    gap: 8px;
+}
+.logo span{
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-transform: uppercase;
+    max-width: 182px;
+    width: 100%;
+}
+.logo img{
+    width: 63px;
+}
+.header-info{
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 24px;
+    max-width: 264px;
+    width: 100%;
+}
+.header-info p{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.header-cnt{
+    gap: 40px;
+}
+
+.header-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.phone-number{
+    color: rgba(56, 155, 139, 1);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+}
+.mail{
+    color: rgba(11, 61, 52, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.open-menu{
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 50px;
+    gap: 12px;
+    transition: 0.3s;
+    border: 2px solid rgba(11, 61, 52, 1);
+    background: rgba(233, 234, 227, 1);
+
+}
+.open-menu:hover{
+    background: #DCDDDF;
+}
+.open-menu-line{
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: 0.3s;
+}
+.open-menu-line span{
+    width: 100%;
+    display: block;
+    height: 2px;
+    background: rgba(11, 61, 52, 1);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.open-menu span{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: rgba(11, 61, 52, 1);
+}
+
+
+.head-menu{
+    box-shadow: 4px 4px 30px 0px rgba(83, 99, 116, 0.3);
+    background: #FFFFFF;
+    width: 360px;
+    padding: 32px;
+    border-radius: 24px;
+    position: absolute;
+    top: 58px;
+    right: 0;
+    z-index: 9991;
+    display: none;
+}
+.menu-opened{
+    display: block;
+}
+.head-menu ul{
+    gap: 4px;
+}
+.head-menu ul li{
+    display: flex;
+}
+.head-menu a{
+    width: 100%;
+    transition: 0.3s;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(45, 45, 45, 1);
+    padding: 16px 16px;
+    border-radius: 16px;
+}
+.head-menu a:hover{
+    background: rgba(56, 155, 139, 0.1);
+    color: rgba(11, 61, 52, 1);
+}
+
+.phone-number-mobile{
+    display: none;
+}
+
+
+@media (max-width: 1199px){
+    header {
+        top: 20px;
+    }
+    .logo span {
+        font-size: 20px;
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 1020px){
+
+    .logo img{
+        width: 48px;
+    }
+    .logo span {
+        font-size: 16px;
+    }
+    .header-info{
+        display: none;
+    }
+    .header-cnt {
+        gap: 20px;
+    }
+    .head-menu {
+        width: 321px;
+        padding: 24px;
+        border-radius: 18px;
+        top: 54px;
+    }
+    .open-menu {
+        padding: 10px 18px;
+        gap: 10px;
+    }
+}
+@media (max-width: 760px){
+    .open-menu>span{
+        display: none;
+    }
+    .open-menu {
+        padding: 10px 13px;
+        gap: 10px;
+        min-width: 48px;
+        max-width: 48px;
+        border-radius: 50%;
+        height: 48px;
+        border: 2px solid rgba(11, 61, 52, 1);
+        background: rgba(233, 234, 227, 1);
+    }
+    .phone-number-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 48px;
+        max-width: 48px;
+        border-radius: 50%;
+        height: 48px;
+        border: 2px solid rgba(11, 61, 52, 1);
+        background: rgba(233, 234, 227, 1);
+    }
+    .icon-phone{
+        content: url("../img/phone.svg");
+        width: 24px;
+    }
+    .header-contact{
+        display: none;
+    }
+    .header-cnt {
+        gap: 8px;
+    }
+    .head-menu a {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 11px 14px;
+    }
+    .head-menu {
+        width: 285px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+}
+@media (max-width: 570px){
+    .logo span{
+        display: none;
+    }
+    header {
+        top: 16px;
+    }
+}
