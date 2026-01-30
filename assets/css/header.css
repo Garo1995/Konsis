@@ -28,9 +28,9 @@ header{
 }
 .header-info{
     border-left: 1px solid rgba(255, 255, 255, 0.1);
-    padding-left: 24px;
-    max-width: 264px;
+    max-width: 281px;
     width: 100%;
+    padding: 8px 0 8px 24px;
 }
 .header-info p{
     color: rgba(255, 255, 255, 0.6);
@@ -138,7 +138,12 @@ header{
 .phone-number-mobile{
     display: none;
 }
-
+.head-menu {
+   display: none;
+}
+.head-menu.menu-opened {
+    display: block;
+}
 
 @media (max-width: 1199px){
     header {
