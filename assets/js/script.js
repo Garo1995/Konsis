@@ -3,7 +3,7 @@
 $(document).ready(function () {
     setTimeout(function () {
         $(".banner-main").addClass("start-anime");
-    }, 900);
+    }, 750);
 });
 
 const revealOnScroll = () => {
@@ -27,35 +27,6 @@ window.addEventListener('load', revealOnScroll);
 
 
 
-
-
-/*$('.head-menu ul li a').on('click', function () {
-    $('.head-menu').removeClass('menu-opened');
-})
-
-$('.open-menu').on('click', function (e) {
-    e.stopPropagation();
-    $('.head-menu').toggleClass('menu-opened');
-
-})
-$(window).on('click', function (e) {
-    let menuSort = $('.head-menu');
-    if (e.target !== menuSort) {
-        menuSort.removeClass('menu-opened');
-    }
-    let menuCLose = $('.open-menu');
-    if (e.target !== menuCLose) {
-        menuCLose.removeClass('close-menu');
-    }
-});*/
-
-
-
-
-
-
-
-
 const isDesktop = window.innerWidth > 1024;
 
 /* =====================
@@ -63,13 +34,13 @@ const isDesktop = window.innerWidth > 1024;
 ===================== */
 if (!isDesktop) {
 
-    $('.head-menu ul li a').on('click', function () {
-        $('.head-menu').removeClass('menu-opened');
-    });
-
     $('.open-menu').on('click', function (e) {
         e.stopPropagation();
         $('.head-menu').toggleClass('menu-opened');
+    });
+
+    $('.head-menu ul li a').on('click', function () {
+        $('.head-menu').removeClass('menu-opened');
     });
 
     $(window).on('click', function (e) {
@@ -83,18 +54,38 @@ if (!isDesktop) {
 }
 
 /* =====================
-   DESKTOP — HOVER
+   DESKTOP — HOVER + OUT
 ===================== */
 if (isDesktop) {
 
+    // открываем при наведении
     $('.open-menu, .head-menu').on('mouseenter', function () {
         $('.head-menu').addClass('menu-opened');
     });
 
-    $('.head-menu').on('mouseleave', function () {
-        $('.head-menu').removeClass('menu-opened');
+    // закрываем, когда ушли с меню И кнопки
+    $('.open-menu, .head-menu').on('mouseleave', function () {
+        setTimeout(function () {
+            if (
+                !$('.open-menu:hover').length &&
+                !$('.head-menu:hover').length
+            ) {
+                $('.head-menu').removeClass('menu-opened');
+            }
+        }, 100);
+    });
+
+    // аутклик (на всякий случай)
+    $(document).on('click', function (e) {
+        if (
+            !$(e.target).closest('.head-menu').length &&
+            !$(e.target).closest('.open-menu').length
+        ) {
+            $('.head-menu').removeClass('menu-opened');
+        }
     });
 }
+
 
 
 
@@ -200,29 +191,69 @@ $('.menu-scroll a').click(function() {
 
 
 
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".stages-work-box");
-
-    items.forEach(item => {
-        item.addEventListener("click", () => {
-            if (item.classList.contains("stages-active")) return;
-
-            items.forEach(el => el.classList.remove("stages-active"));
-            item.classList.add("stages-active");
-        });
-    });
-});
-
-
-
-
 $('.more-team').on('click', function () {
     $(this).addClass('btn-team-none')
     $('.our-team-box').removeClass('team-none');
 })
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+
+    const speed = 400; // медленно и красиво
+
+    function openBlock(block) {
+        const content = block.find('.stages-content');
+        const autoHeight = content.css('height', 'auto').outerHeight();
+
+        content.height(0).animate(
+            { height: autoHeight },
+            speed,
+            function () {
+                content.css('height', 'auto');
+            }
+        );
+
+        block.addClass('stages-active');
+    }
+
+    function closeBlock(block) {
+        block.find('.stages-content').animate(
+            { height: 0 },
+            speed
+        );
+
+        block.removeClass('stages-active');
+    }
+
+    // Первый блок открыт всегда
+    openBlock($('.stages-work-box').first());
+
+    // Клик по ВСЕМУ блоку
+    $('.stages-work-box').on('click', function () {
+        const current = $(this);
+
+        if (current.hasClass('stages-active')) return;
+
+        // Закрываем все открытые
+        $('.stages-work-box.stages-active').each(function () {
+            closeBlock($(this));
+        });
+
+        // Открываем текущий
+        openBlock(current);
+    });
+
+});
 
 
 

@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Great+Vibes&family=Homemade+Apple&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&family=Orelega+One&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
     <link rel="stylesheet" href="style.css">
     <title>ООО-Консис</title>
 </head>
@@ -394,14 +400,16 @@
     <div class="container">
         <div class="companies-min">
             <div class="companies-info ">
-                <i class="icon-dialog"></i>
-                <p>
-                    Компания обладает одним из крупнейших практических опытов в отрасли.
-                </p>
-                <p>
-                    Наша команда сформировала профессиональную экспертизу, которая стала основой развития рынка и используется многими его участниками.
-                </p>
+                <div class="companies-text">
+                    <i class="icon-dialog"></i>
+                    <p>
+                        Компания обладает одним из крупнейших практических опытов в отрасли.
+                    </p>
+                    <p>
+                        Наша команда сформировала профессиональную экспертизу, которая стала основой развития рынка и используется многими его участниками.
+                    </p>
 
+                </div>
                 <div class="companies-name">
                     <span>Ландо Евгений Олегович</span>
                     <small>Генеральный директор компании</small>
@@ -779,14 +787,14 @@
             </div>
             <div class="escort-cons G-flex-column G-align-start animate-on-scroll delay-300">
                 <h3>Сопровождаем дело на каждом этапе — профессионально и последовательно</h3>
-                <button class="btn ">
+                <div class="btn">
                     <span class="btn-name">Консультация</span>
                     <span class="btn-arrow G-center">
                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6343 0.323844C11.6372 0.326954 11.6405 0.329675 11.6433 0.332821C11.6598 0.351208 11.6753 0.370173 11.6902 0.389445C11.6965 0.397529 11.7022 0.406026 11.7082 0.414304C11.7207 0.431507 11.7335 0.448305 11.7448 0.466094C11.7484 0.471824 11.751 0.478241 11.7545 0.484048C11.8527 0.646418 11.9012 0.829963 11.8988 1.01369V8.07094C11.8988 8.62315 11.4511 9.07072 10.8989 9.07084C10.3466 9.07083 9.89901 8.62322 9.899 8.07094V3.41536L1.7072 11.6072C1.31676 11.9976 0.683517 11.9974 0.292985 11.6072C-0.0975254 11.2167 -0.0974974 10.5835 0.292985 10.193L8.48617 1.99977L3.82783 1.99977C3.27555 1.99976 2.82794 1.55215 2.82794 0.999877C2.82817 0.447793 3.27569 -1.00895e-05 3.82783 -1.59427e-05L10.8989 -1.60059e-05L10.961 0.00274613C11.1819 0.0163174 11.3985 0.102962 11.5729 0.262387C11.5741 0.263484 11.5751 0.264737 11.5763 0.26584C11.5862 0.274999 11.5971 0.283826 11.6067 0.293461C11.6164 0.30319 11.6251 0.313821 11.6343 0.323844Z" fill="#0B3D34"/>
                         </svg>
                     </span>
-                </button>
+                </div>
             </div>
 
             <div class="escort-item animate-on-scroll delay-400">
@@ -1162,7 +1170,7 @@
 
 
         <div class="languages-block">
-            <div class="languages-row" data-direction="left" data-speed="40">
+            <div class="languages-row" data-direction="left" data-speed="50">
                 <div class="languages-track" >
 
                     <div class="about-logo G-flex">
@@ -1306,8 +1314,20 @@
 <script src="assets/js/quiz.js"></script>
 <script src="assets/js/script.js"></script>
 <script>
-    $.mask.definitions['h'] = "[0|1|3|4|5|6|7|9]"
-    $(".mask-phone").mask("+7 (h99) 999-99-99");
+
+    $.mask.definitions['h'] = "[0|1|3|4|5|6|7|9]";
+
+    $(".mask-phone").mask("+7 (h99) 999-99-99", {
+        autoclear: false
+    });
+
+    $(".mask-phone").on("focus click", function () {
+        const input = this;
+        setTimeout(function () {
+            // позиция после "+7 ("
+            input.setSelectionRange(4, 4);
+        }, 0);
+    });
 </script>
 
 </body>
