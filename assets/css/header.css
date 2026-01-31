@@ -4,7 +4,7 @@ header{
     left: 0;
     z-index: 1111;
     width: 100%;
-    transform: translateY(-120px);
+    transform: translateY(-20px);
     transition: 0.7s;
 }
 
@@ -240,5 +240,12 @@ header{
     }
     header {
         top: 16px;
+    }
+    header{
+        transform: translateY(-10px);
+    }
+    .header-anime{
+        transform: translateY(0);
+
     }
 }
