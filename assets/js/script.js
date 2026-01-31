@@ -3,7 +3,7 @@
 $(document).ready(function () {
     setTimeout(function () {
         $(".banner-main").addClass("start-anime");
-    }, 750);
+    }, 400);
 });
 
 const revealOnScroll = () => {

@@ -468,10 +468,6 @@ p{
     transition: 0.3s;
 }
 
-.causes-box:hover h4{
-    transform: translateY(-8px);
-}
-
 
 .questions-main{
     background: rgba(11, 61, 52, 1);
@@ -1955,7 +1951,7 @@ footer{
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-    text-align: right;
+    text-align: left;
     text-decoration: underline;
 }
 .policy-href:hover{
@@ -1965,6 +1961,7 @@ footer{
 
 .footer-policy .btn-line{
     margin-bottom: 35px;
+    width: 100%;
 }
 
 
