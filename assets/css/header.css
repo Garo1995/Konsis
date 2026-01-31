@@ -4,6 +4,13 @@ header{
     left: 0;
     z-index: 1111;
     width: 100%;
+    transform: translateY(-120px);
+    transition: 0.7s;
+}
+
+.header-anime{
+    transform: translateY(0);
+
 }
 .header-main{
     position: relative;

@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
     setTimeout(function () {
+        $(".header").addClass("header-anime");
         $(".banner-main").addClass("start-anime");
     }, 400);
 });
@@ -190,15 +191,16 @@ $('.menu-scroll a').click(function() {
 
 
 
-
 $('.more-team').on('click', function () {
-    $(this).addClass('btn-team-none')
-    $('.our-team-box').removeClass('team-none');
-})
+    $(this).addClass('btn-team-none');
 
-
-
-
+    $('.our-team-box.team-none').each(function (i) {
+        $(this)
+            .delay(i * 120) // задержка между карточками
+            .slideDown(400) // или fadeIn(400)
+            .removeClass('team-none');
+    });
+});
 
 
 
