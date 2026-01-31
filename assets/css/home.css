@@ -850,7 +850,15 @@ p{
     transition: 0.3s;
 }
 .our-team-box:hover img{
-    transform: scale(1.03);
+   transform: scale(1.1);
+}
+.our-team-photo{
+    width: 100%;
+    display: flex;
+    transition: 0.3s;
+    overflow: hidden;
+    border-radius: 24px;
+
 }
 .our-team-box h4{
     color: rgba(45, 45, 45, 1);
@@ -1686,6 +1694,7 @@ p{
 .about-us-photo img{
     width: 100%;
     border-radius: 24px 72px 24px 24px;
+    object-fit: cover;
 }
 
 
@@ -1934,14 +1943,14 @@ footer{
     stroke: red;
 }
 .footer-policy {
-    gap: 75px;
     max-width: 255px;
     width: 100%;
+    gap: 16px;
 }
 .footer-policy p{
     text-align: right;
 }
-.footer-policy a{
+.policy-href{
     color: rgba(45, 45, 45, 1);
     font-weight: 400;
     font-size: 16px;
@@ -1949,12 +1958,14 @@ footer{
     text-align: right;
     text-decoration: underline;
 }
-.footer-policy a:hover{
+.policy-href:hover{
     text-decoration: unset;
 }
 
 
-
+.footer-policy .btn-line{
+    margin-bottom: 35px;
+}
 
 
 
@@ -3014,7 +3025,6 @@ footer{
         padding: 8px 0 56px;
     }
     .footer-policy {
-        gap: 24px;
         max-width: 455px;
         width: 100%;
         align-items: flex-start;
@@ -3215,7 +3225,9 @@ footer{
     .company-figures:before {
         height: 526px;
     }
-
+    .about-us-photo img {
+        height: 245px;
+    }
     .banner-gerb {
         height: 326px;
         background: rgba(233, 234, 227, 1);
