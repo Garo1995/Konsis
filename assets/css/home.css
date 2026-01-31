@@ -3273,4 +3273,7 @@ footer{
     .figures-count h3 {
         max-width: 340px;
     }
+    .footer-policy .btn-line {
+        margin-bottom: 20px;
+    }
 }
