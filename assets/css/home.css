@@ -838,12 +838,12 @@ p{
     width: calc(25% - 12px);
     display: flex;
     flex-direction: column;
-    transition: 0.3s;
+    transition: 0.6s;
 }
 .our-team-box img{
     width: 100%;
     border-radius: 24px;
-    transition: 0.3s;
+    transition: 0.6s;
 }
 .our-team-box:hover img{
    transform: scale(1.1);
