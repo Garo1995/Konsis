@@ -1192,8 +1192,10 @@ p{
 
 }
 
-
 .escort-wrap{
+    margin-top: 16px;
+}
+.escort-wrap, .escort-qwe{
     gap: 16px;
 }
 .escort-box, .escort-cons{
@@ -1263,7 +1265,7 @@ p{
 .escort-item p{
     margin-top: 16px;
 }
-.escort-item:nth-child(3){
+.escort-item:nth-child(1){
     border-radius: 24px 24px 24px 72px;
 
 }
@@ -1575,8 +1577,24 @@ p{
 
 }
 .reviews-photo{
-    max-width: 544px;
+    max-width: 600px;
     width: 100%;
+    position: relative;
+    transition: 0.3s;
+}
+.reviews-photo:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-image: url("../img/search.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s;
 }
 .reviews-photo img{
     width: 100%;
@@ -1588,7 +1606,7 @@ p{
     width: 100%;
     position: relative;
     height: 100%;
-    padding-top: 104px;
+    padding-top: 134px;
 }
 .reviews-info small{
     font-weight: 400;
@@ -2092,7 +2110,7 @@ footer{
         font-size: 18px;
     }
     .escort-cons {
-        padding: 120px 32px 32px;
+        padding: 70px 32px 32px;
     }
     .consult-main {
         padding: 60px 50px 60px;
@@ -2330,7 +2348,7 @@ footer{
         padding: 24px 16px;
         border-radius: 16px;
     }
-    .escort-item:nth-child(3) {
+    .escort-item:nth-child(1) {
         border-radius: 16px 16px 16px 48px;
     }
     .escort-item p {
@@ -3121,7 +3139,9 @@ footer{
         flex-direction: column;
         align-items: center;
     }
-
+    .escort-qwe{
+        flex-direction: column;
+    }
 }
 @media (max-width: 570px) {
     .banner-men {
