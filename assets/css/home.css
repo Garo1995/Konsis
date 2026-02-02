@@ -1581,6 +1581,7 @@ p{
     width: 100%;
     position: relative;
     transition: 0.3s;
+
 }
 .reviews-photo:before{
     content: "";
@@ -1595,12 +1596,15 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     transition: 0.3s;
+    opacity: 0;
 }
 .reviews-photo img{
     width: 100%;
     border-radius: 24px;
 }
-
+.reviews-photo:hover:before{
+    opacity: 1;
+}
 .reviews-info{
     max-width: 624px;
     width: 100%;
