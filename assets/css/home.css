@@ -3360,5 +3360,7 @@ footer{
     .footer-policy .btn-line {
         margin-bottom: 20px;
     }
-
+    .course-text p {
+        font-size: 14px;
+    }
 }
