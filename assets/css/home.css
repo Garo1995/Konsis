@@ -1581,7 +1581,6 @@ p{
     width: 100%;
     position: relative;
     transition: 0.3s;
-
 }
 .reviews-photo:before{
     content: "";
