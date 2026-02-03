@@ -1,8 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1265)"><rect width="1000" height="1000" fill="#0b3d34"></rect><g transform="matrix(12.5,0,0,12.5,100,112.5)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="62"><svg width="64" height="62" viewBox="0 0 64 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="31.9648" y="2.74487" width="25.3169" height="25.3169" rx="3" transform="rotate(45 31.9648 2.74487)" fill="white"></rect>
-<rect x="15.3281" y="27.7671" width="18.9877" height="18.9877" rx="1" transform="rotate(45 15.3281 27.7671)" stroke="white" stroke-width="3"></rect>
-<rect x="48.5547" y="27.7671" width="18.9877" height="18.9877" rx="1" transform="rotate(45 48.5547 27.7671)" stroke="white" stroke-width="3"></rect>
-<path d="M43.064 57.8775L32.6485 47.462C32.258 47.0715 31.6248 47.0715 31.2343 47.462L20.8188 57.8775" stroke="white" stroke-width="3" stroke-linecap="round"></path>
-</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1265"><rect width="1000" height="1000" x="0" y="0" rx="150" ry="150"></rect></clipPath></defs></svg></svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="326.28" height="311.71"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="326.28" height="311.71"><svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 326.28 311.71">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #315242;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #58b140;
+      }
+
+      .cls-3 {
+        fill: #87c69e;
+      }
+
+      .cls-4 {
+        fill: #1b6f31;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" x="99.5" y="42.56" width="127.28" height="127.28" transform="translate(-27.31 146.47) rotate(-45)"></rect>
+  <polygon class="cls-1" points="220.29 295.51 163.14 238.36 106 295.51 96.81 286.32 163.14 219.98 229.48 286.32 220.29 295.51"></polygon>
+  <path class="cls-2" d="m85.59,274.16L21.57,210.14l64.02-64.02,64.02,64.02-64.02,64.02Zm-39.98-64.02l39.98,39.98,39.98-39.98-39.98-39.98-39.98,39.98Z"></path>
+  <path class="cls-3" d="m240.69,274.16l-64.02-64.02,64.02-64.02,64.02,64.02-64.02,64.02Zm-39.98-64.02l39.98,39.98,39.98-39.98-39.98-39.98-39.98,39.98Z"></path>
+</svg></svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
 @media (prefers-color-scheme: dark) { :root { filter: none; } }
 </style></svg>
